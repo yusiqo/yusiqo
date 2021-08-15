@@ -79,11 +79,10 @@
 
 <!-- YOUTUBE:START -->
 
-- [Who Will Win? No-Code, Low-Code, AI. Should You Be Worried?](https://www.youtube.com/watch?v=0ldB86iVu9w)
+- [Easy Best Basic Logo With Pixellab](https://youtu.be/IWTOnsDUvDo)
 
-- [How To Manage Multiple APIs with RapidAPI (2021)](https://www.youtube.com/watch?v=NFToND6x_nI)
-
-- [How Core Web Vitals Will Affect Google Rankings in 2021 | Interview :: Lee Robinson](https://www.youtube.com/watch?v=-lcDZDfjekc)
+- [Termux 5 Method](https://youtu.be/Zzhn35LQm2o)
+- [Among Us Hack](https://youtu.be/hNCpoWxLvdU)
 
 
 <!-- YOUTUBE:END -->
@@ -91,14 +90,3 @@
 
 ➡️ [more videos...](https://youtube.com/c/Yusiqo)
 ➡️ [more blog posts...](https://codestackr.com)
-
-
----
-
-
-<details>
-
-  <summary>:zap: GitHub Stats</summary>
-
-
-  <img align="left" alt="codeSTACKr's GitHub Stats" src="https://github-readme-stats.codestackr.vercel.app/api?username=codeSTACKr&show_icons=true&hide_border=true" />

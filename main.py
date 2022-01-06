@@ -1,16 +1,5 @@
-from typing import Mapping
-import webbrowser
-webbrowser.open('https://t.me/atomreferans')
-try:
-    import random, requests, os, uuid, time, secrets
-    from uuid import uuid4
-except ModuleNotFoundError:
-    os.system('pip install time')
-    os.system('pip install uuid')
-    os.system('pip install random')
-    os.system('pip install requests')
-else:
-    BRed = '\x1b[1;31m'
+  import random, requests, os, uuid, time, secrets  
+BRed = '\x1b[1;31m'
     BGreen = '\x1b[1;32m'
     BYellow = '\x1b[1;33m'
     BBlue = '\x1b[1;34m'

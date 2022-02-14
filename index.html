@@ -1,176 +1,180 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Sync is a landing page HTML template built with Bootstrap 4 for presenting mobile apps to the online audience and for getting visitors to become users.">
-    <meta name="author" content="Inovatik">
-
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
-
-    <!-- Webpage Title -->
-    <title>DeltaMedya - En İyi Hesap Checker Sitesi</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+	<title>Delta</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/css/mdb.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target=".fixed-top">
-    
-    <!-- Preloader -->
-	<div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
+
+<body>
+	<br>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+		<div class="row col-md-12">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<div class="card col-sm-8">
+  <h5 class="card-body h6">En iyi Checker - CHT Team</h5>
+  <div class="card-body">
+    <center><span>[#Delta]</span></center>
+<div class="md-form">
+	<div class="col-md-12">
+  <textarea type="text" style="text-align: center;" id="lista" class="md-textarea form-control" rows="2"></textarea>
+  <label for="lista">Exxen Combo Gir</label>
+</div>
+</div>
+<center>
+ <button class="btn btn-primary" style="width: 200px; outline: none;" id="testar" onclick="enviar()" >START</button>
+  <button class="btn btn-danger" style="width: 200px; outline: none;">STOP</button>
+</center>
+  </div>
+</div>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<div class="card col-sm-2">
+  <h5 class="card-body h6">Information:</h5>
+  <div class="card-body">
+  	<span>Status:</span><span class="badge badge-secondary"> Komut Bekleniyor.</span>
+<div class="md-form">
+	<span>Onaylandı:</span>&nbsp<span id="cLive" class="badge badge-success">0</span>
+	<span>Başarısız:</span>&nbsp<span id="cDie" class="badge badge-danger"> 0</span>
+	<span>Test Edildi:</span>&nbsp<span id="total" class="badge badge-info">0</span>
+	<span>Toplam Yüklenen:</span>&nbsp<span id="carregadas" class="badge badge-dark">0</span>
+</div>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="col-md-12">
+<div class="card">
+<div style="position: absolute;
+        top: 0;
+        right: 0;">
+	<button id="mostra" class="btn btn-primary">GÖSTER/SAKLA</button>
+</div>
+  <div class="card-body">
+    <h6 style="font-weight: bold;" class="card-title">Onaylandı - <span  id="cLive2" class="badge badge-success">0</span></h6>
+    <div id="bode"><span id=".aprovadas" class="aprovadas"></span>
+</div>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="col-md-12">
+<div class="card">
+	<div style="position: absolute;
+        top: 0;
+        right: 0;">
+	<button id="mostra2" class="btn btn-primary">GÖSTER/SAKLA</button>
+</div>
+  <div class="card-body">
+    <h6 style="font-weight: bold;" class="card-title">Başarısız - <span id="cDie2" class="badge badge-danger">0</span></h6>
+    <div id="bode2"><span id=".reprovadas" class="reprovadas"></span>
     </div>
-    <!-- end of preloader -->
-    
+  </div>
+</div>
+</div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container">
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Sync</a> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
 
-            <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="https://i.hizliresim.com/mv824k4.png" alt="alternative"></a> 
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-awesome fas fa-bars"></span>
-                <span class="navbar-toggler-awesome fas fa-times"></span>
-            </button>
-<script type="text/javascript">(function() {var script=document.createElement("script");script.type="text/javascript";script.async =true;script.src="//telegramim.ru/widget-button/index.php?id=@portakalmedya";document.getElementsByTagName("head")[0].appendChild(script);})();</script>
-<a href="https://t.me/portakalmedya" target="_blank" class="telegramim_button telegramim_shadow telegramim_pulse" style="font-size:26px;width:48px;background:#27A5E7;box-shadow:1px 1px 5px #27A5E7;color:#FFFFFF;border-radius:50px;" title=""><i></i></a>
-
-            <!-- end of mobile menu toggle button -->
-
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://deltamedya.tk/exxen">Exxen Checker</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://deltamedya.tk/blutv">BluTv Checker</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://deltamedya.tk/trendyol">TrendYol Checker</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="https://deltamedya.tk/smsonay"SmsOnay Checker</a>
-                    </li>
-
-                    <!-- Dropdown Menu -->          
-                    <li class="nav-item dropdown">
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://deltamedya.tk/exxen"><span class="item-text">Exxen Checker</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://deltamedya.tk/blutv"><span class="item-text">BluTv Checker</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://deltamedya.tk/trendyol"><span class="item-text">TrendYol Checker</span></a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://deltamedya.tk/smsonay"><span class="item-text">SmsOnay Checker</span></a>
-                        </div>
-                    </li>
-                    <!-- end of dropdown menu -->
-                </ul>
-                </span>
-            </div>
-        </div> <!-- end of container -->
-    </nav> <!-- end of navbar -->
-    <!-- end of navigation -->
+$(document).ready(function(){
 
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <h1>Online Checker Sitesi</h1>
-                        <p class="p-large p-heading">İstediğin Hesap Türünü Seç Komboyu Yapıştır Check Etmeye Başla</p>
-                        <a class="btn-solid-lg" href="https://deltamedya.tk/exxen"><i class="fab fa-google-play"></i>Exxen</a>
-                        <a class="btn-solid-lg" href="https://deltamedya.tk/blutv"><i class="fab fa-google-play"></i>BluTv</a>
-                        <a class="btn-solid-lg" href="https://deltamedya.tk/trendyol"><i class="fab fa-google-play"></i>Trendyol</a>
-                        <a class="btn-solid-lg" href="https://deltamedya.tk/smsonay"><i class="fab fa-google-play"></i>SmsOnay</a>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="image-container">
-                       <img class="img-fluid" src="images/header-iphone.png" alt="alternative">
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-        <div class="deco-white-circle-1">
-            <img src="images/decorative-white-circle.svg" alt="alternative">
-        </div> <!-- end of deco-white-circle-1 -->
-        <div class="deco-white-circle-2">
-            <img src="images/decorative-white-circle.svg" alt="alternative">
-        </div> <!-- end of deco-white-circle-2 -->
-        <div class="deco-blue-circle">
-            <img src="images/decorative-blue-circle.svg" alt="alternative">
-        </div> <!-- end of deco-blue-circle -->
-        <div class="deco-yellow-circle">
-            <img src="images/decorative-yellow-circle.svg" alt="alternative">
-        </div> <!-- end of deco-yellow-circle -->
-        <div class="deco-green-diamond">
-            <img src="images/decorative-green-diamond.svg" alt="alternative">
-        </div> <!-- end of deco-yellow-circle -->
-    </header> <!-- end of header -->
-    <!-- end of header -->
+    $("#bode").hide();
+	$("#esconde").show();
+	
+	$('#mostra').click(function(){
+	$("#bode").slideToggle();
+	});
+
+});
+
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
 
 
-    <!-- Small Features -->
-    <div class="cards-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                  
-    <!-- Copyright -->
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2020 <a href="https://deltamedya.tk">DeltaMedya</a> - All rights reserved</p>
-                </div> <!-- end of col -->
-            </div> <!-- enf of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
-    <!-- end of copyright -->
-    
-    	
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    $("#bode2").hide();
+	$("#esconde2").show();
+	
+	$('#mostra2').click(function(){
+	$("#bode2").slideToggle();
+	});
+
+});
+
+</script>
+
+<script title="ajax do checker">
+    function enviar() {
+        var linha = $("#lista").val();
+        var linhaenviar = linha.split("\n");
+        var total = linhaenviar.length;
+        var ap = 0;
+        var rp = 0;
+        linhaenviar.forEach(function(value, index) {
+            setTimeout(
+                function() {
+                    $.ajax({
+                        url: 'api.php?lista=' + value,
+                        type: 'GET',
+                        async: true,
+                        success: function(resultado) {
+                            if (resultado.match("#Onaylandı")) {
+                                removelinha();
+                                ap++;
+                                aprovadas(resultado + "");
+                            }else {
+                                removelinha();
+                                rp++;
+                                reprovadas(resultado + "");
+                            }
+                            $('#carregadas').html(total);
+                            var fila = parseInt(ap) + parseInt(rp);
+                            $('#cLive').html(ap);
+                            $('#cDie').html(rp);
+                            $('#total').html(fila);
+                            $('#cLive2').html(ap);
+                            $('#cDie2').html(rp);
+                        }
+                    });
+                }, 500 * index);
+        });
+    }
+    function aprovadas(str) {
+        $(".aprovadas").append(str + "<br>");
+    }
+    function reprovadas(str) {
+        $(".reprovadas").append(str + "<br>");
+    }
+    function removelinha() {
+        var lines = $("#lista").val().split('\n');
+        lines.splice(0, 1);
+        $("#lista").val(lines.join("\n"));
+    }
+</script>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.11/js/mdb.min.js"></script>
 </body>
+<br>
+<footer >
+
+
+    <div class="footer-copyright text-center py-3">Made by Yusiqo:
+      <a href="https://discordapp.com/"> Yusiqo#666</a>
+    </div>
+
+
+  </footer>
+
 </html>

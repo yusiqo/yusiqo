@@ -3,13 +3,13 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=yusiqo&label=Profile%20views&color=0e75b6&style=flat" alt="yusiqo" /> </p>
 
-- 🔭 I’m currently working on **Android App Projects**
+- 🔭 I’m currently working on **Android App Projects And OS**
 
 - 🌱 I’m currently learning **Machine Learning (ML & LLM), Web Security**
 
 - 👨‍💻 All of my projects are available at [https://yusiqo.com](https://yusiqo.com)
 
-- 🌱 Our **Forum website** is [DevsForum.org](https://Devsforum.org)
+- 🌱 We Make **XariOS**. (Operating System For Azerbaijan. Name from (Xarı bülbül)
 
 - 📫 How to reach me **info@yusiqo.com**
 
